@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+	<body>
+	<h1 class="text">This is some testing Page for PhantomJS</h1>
+	<div id="render_div">this is some text under div</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			$('.text').text('Text Changed');
+			
+			var div = document.createElement("div");
+			div.style.width = "100px";
+			div.style.height = "100px";
+			div.style.background = "red";
+			div.style.color = "white";
+			div.innerHTML = "Hello";
+
+			document.getElementById("render_div").appendChild(div);
+		}, 3000);
+	</script>
+	</body>
+</html>
